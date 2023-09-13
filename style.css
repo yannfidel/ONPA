@@ -54,7 +54,7 @@ header{
     justify-content: center;
     align-items: center;
     color: #fff;
-    background:  url(../imgs/Design_sem_nome__10_.png);
+    background:  url(../ONPA/imgs/);
     background-size: cover;
     background-blend-mode: screen;
     background-attachment: fixed;
@@ -119,17 +119,17 @@ main{
 
 
 .img1{
-    background-image: url(../imgs/cachorro-policia-civil-970x550.jpg);
+    background-image: url(../ONPA/imgs/cachorro-policia-civil-970x550.jpg);
     background-size: cover;
     
 }
 .img2{
-    background-image: url(../imgs/cachorro-na-lama.jpg);
+    background-image: url(../ONPA/imgs/cachorro-na-lama.jpg);
     background-size: cover;
    
 }
 .img3{
-    background-image: url(../imgs/vecteezy_silver-tabby-cat-sitting-on-green-background_2098203.jpg);
+    background-image: url(../ONPA/imgs/vecteezy_silver-tabby-cat-sitting-on-green-background_2098203.jpg);
     background-size: cover;
     
 }
@@ -159,16 +159,16 @@ footer p{
 }
 
 .icone1{
-    background-image: url(../imgs/vecteezy_location-icon-gps-pointer-icon-map-locator-sign-pin_19986394_384.png);
+    background-image: url(../ONPA/imgs/vecteezy_location-icon-gps-pointer-icon-map-locator-sign-pin_19986394_384.png);
     background-size: cover;
 }
 
 .icone2{
-    background-image: url(../imgs/vecteezy_plus-icon-clip-art_22188092_591.png);
+    background-image: url(../ONPA/imgs/vecteezy_plus-icon-clip-art_22188092_591.png);
     background-size: cover;
 }
 
 .icone3{
-    background-image: url(../imgs/vecteezy_water-drop_1196097.png);
+    background-image: url(../ONPA/imgs/vecteezy_water-drop_1196097.png);
     background-size: cover;
 }
