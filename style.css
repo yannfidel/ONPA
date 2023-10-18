@@ -166,9 +166,11 @@ FOOTER FORM{
     display: flex  ;    
     flex-direction: column;
     align-items:center;
-    justify-content: space-around;
+    justify-content: space-between;
     
-   margin: 100px;
+    padding: 70px;
+    
+   
 }
 
 footer p{
@@ -194,5 +196,14 @@ footer p{
 .borda{
     display: flex;
     flex-direction: row;
-    height: 50%;
+    height: 400px;
+    
+    align-items: center;
+}
+
+.meioB{
+    display: flex;
+    flex-direction: column;
+    margin-left: 320px;
+    margin-right: 320px;
 }
