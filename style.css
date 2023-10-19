@@ -20,7 +20,7 @@
 }
 
 header a{
-    
+    font-size: medium;
     color: white;
     text-decoration: none;
 }
@@ -52,12 +52,13 @@ header{
 
 
 .s1 {
-    width: 1349px;
-    height: 500px;
+    width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
+    padding:
+    55px 60px 50px 60px ;
     color: #fff;
     background:  url(../ONPA/imgs/Design_sem_nome__10_.png);
     background-size: cover;
@@ -153,7 +154,7 @@ main{
 
 footer{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
     background-color: rgb(68, 63, 63);
@@ -166,9 +167,10 @@ FOOTER FORM{
     display: flex  ;    
     flex-direction: column;
     align-items:center;
-    justify-content: space-between;
     
-    padding: 70px;
+    
+    padding: 80px;
+    
     
    
 }
@@ -191,19 +193,33 @@ footer p{
     background-image: url(../ONPA/imgs/vecteezy_water-drop_1196097.png);
     background-size: cover;
 }
-
-
 .borda{
     display: flex;
-    flex-direction: row;
-    height: 400px;
-    
-    align-items: center;
+    width: 100%;
+    justify-content: space-between;
 }
 
 .meioB{
     display: flex;
     flex-direction: column;
-    margin-left: 320px;
-    margin-right: 320px;
+    
+    
+}
+@media (max-width: 733px) {
+    .borda {
+        justify-content: center;
+    }
+    footer form {
+        padding: 30px;
+    }
+    .borda img {
+        display: none;
+    }
+    .meioB p {
+        max-width: 300px;
+        text-align: center;
+    }
+    .meioB {
+        align-items: center;
+    }
 }
