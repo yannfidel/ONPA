@@ -223,3 +223,22 @@ footer p{
         align-items: center;
     }
 }
+
+.LC{
+    position: absolute;
+    top: -25px;
+    right: -20px;
+}
+
+.cadasF{
+    margin-top: 20px;
+}
+
+.body  {
+    background: orangered; /* fallback for old browsers */
+    background: rgb(255, 92, 32);
+    background: linear-gradient(90deg, rgb(255, 112, 60) 0%, orangered 50%);
+    font-family: "Roboto", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;      
+  }
