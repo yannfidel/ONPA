@@ -88,14 +88,7 @@
 .container .info span .fa {
   color: #EF3B3A;
 }
-body {
-  background: orangered; /* fallback for old browsers */
-  background: rgb(255, 92, 32);
-  background: linear-gradient(90deg, rgb(255, 112, 60) 0%, orangered 50%);
-  font-family: "Roboto", sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;      
-}
+
 
 
 .header1{
@@ -215,4 +208,15 @@ footer p{
 
 .cadasF{
     margin-top: 20px;
+}
+
+.body  {
+    background: url(paisagem.svg);
+  
+ 
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;  
+  display: flex;
+  padding: 30px;    
 }
