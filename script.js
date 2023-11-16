@@ -1,52 +1,79 @@
-const express = require('express');
-const mongoose = require('mongoose');
-const bodyParser = require('body-parser');
+//requisitando os modulos
+const mongoose = require("mongoose");
+const express = require("express");
+const bodyParser = require("body-parser");
+
+//configurando o express para o postman e para usar a pagina
 const app = express();
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+const authRouter = require("../routes/auth-routes");
+const port = 3000;
 
-// Conectar ao banco de dados MongoDB
-mongoose.connect('mongodb://localhost/cadastrousuario.html', { useNewUrlParser: true, useUnifiedTopology: true });
-const db = mongoose.connection;
-db.on('error', console.error.bind(console, 'Erro na conexão com o MongoDB:'));
-db.once('open', () => {
-    console.log('Conexão bem-sucedida com o MongoDB');
+//configurando o banco de dados
+mongoose.connect("mongodb://127.0.0.1:27017/ONPA", {
+  useNewUrlParser: true,
+  useUnifiedTopology: true, 
 });
 
-// Definir um modelo de usuário usando Mongoose
+//criando a model do seu projeto
 const UsuarioSchema = new mongoose.Schema({
-    nome: String,
-    email: String,
-    celular: String,
-    endereco: String
-    // Adicione os outros campos aqui
+  nome: { type: String },
+  senha: { type: String },
+  celular: {type: String},
+  endereco: {type: String},
+  complemento: {type: String},
+  CEP : {type : String}
 });
-const Usuario = mongoose.model('Usuario', UsuarioSchema);
+const Usuario = mongoose.model("Usuario", UsuarioSchema);
 
-// Configurar o middleware para analisar o corpo da solicitação
-app.use(bodyParser.urlencoded({ extended: false }));
 
-// Rota para processar o envio do formulário
-app.post('/cadastro', (req, res) => {
-    const novoUsuario = new Usuario({
-        nome: req.body.nome,
-        email: req.body.email,
-        celular: req.body.celular,
-        endereco: req.body.endereco
-        // Preencha os outros campos aqui
-    });
+const AnimalSchema = new mongoose.Schema({
+    nome: {type: String},
+    idade : {type: Number},
+    tipo : {type: String},
+    raca: {type: String}
+})
 
-    // Salvar o usuário no MongoDB
-    novoUsuario.save((err) => {
-        if (err) {
-            console.error('Erro ao salvar o usuário:', err);
-            res.sendStatus(500);
-        } else {
-            console.log('Usuário cadastrado com sucesso');
-            res.redirect('/');
-        }
-    });
+const Animal = mongoose.model("Animal", AnimalSchema);
+//configuração dos roteamendos
+//cadastrousuario
+app.post("/cadastrousuario", async (req, res) => {
+  const nome = req.body.nome;
+  const senha = req.body.senha;
+  const celular = req.body.celular;
+  const endereco = req.body.endereco;
+  const cep = req.body.cep;
+
+  //validação de campos
+
+  const usuario = new Usuario({
+    nome: nome,
+    senha: senha,
+    celular: celular,
+    endereco: endereco,
+    cep: cep
+  });
+
+  try {
+    const newUsuario = await usuario.save();
+    res.json({ error: null, msg: "Cadastro ok", UsuarioId: newUsuario._id });
+  } catch (error) {}
 });
 
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-    console.log(`Servidor rodando na porta ${PORT}`);
+const emailExists = await Usuario.findOne({senha : senha});
+
+
+
+//rota de get de formulario
+app.get("/cadastrousuario", async (req, res) => {
+  res.sendFile(__dirname + "/cadastrousuario.html");
+});
+
+app.get("/", async (req, res) => {
+  res.sendFile(__dirname + "/index.html");
+});
+
+app.listen(port, () => {
+  console.log(`Servidor rodando na porta ${port}`);
 });
