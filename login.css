@@ -202,7 +202,7 @@ footer p{
 
 .LC{
     position: absolute;
-    top: 33px;
+    top: -80;
     right: 173px;
 }
 
@@ -219,4 +219,10 @@ footer p{
   -moz-osx-font-smoothing: grayscale;  
   display: flex;
   padding: 30px;    
+}
+
+.UB{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

@@ -228,8 +228,9 @@ footer p{
 
 .LC{
     position: absolute;
-    top: -25px;
-    right: -20px;
+    top: 58px;
+    right: 173px;
+    
 }
 
 .cadasF{
@@ -260,3 +261,90 @@ footer p{
     display: flex;
     justify-content: space-around;
 }
+
+
+.UB{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+  }
+
+
+  .saude{
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+
+  }
+
+  .sangue{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .alimentacao{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .gps{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+   
+  }
+
+
+  .saudeC{
+    width: 100px;
+    height: 800px;
+      }
+    
+      .sangueC{
+        width: 100px;
+        height: 700px;
+      }
+    
+      .alimentacaoC{
+        width: 100px;
+    height: 700px;
+      }
+    
+      .gpsC{
+        width: 100px;
+        height: 700px;
+      }
+
+      .saudeI{
+        margin-top: 30px;
+          }
+        
+          .sangueI{
+            margin-top: 100px;
+          }
+        
+          .alimentacaoI{
+            margin-top: 30px;
+          }
+        
+          .gpsI{
+            margin-top: 150px;
+          }
+
+
+          .linkzao{
+            color: white;
+          }
+
+
+          main{
+            background: url(deserto2.svg);
+            background-size: cover;
+          }

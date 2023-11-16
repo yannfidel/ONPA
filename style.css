@@ -226,8 +226,8 @@ footer p{
 
 .LC{
     position: absolute;
-    top: -25px;
-    right: -20px;
+    top: -80;
+    right: 35px;
 }
 
 .cadasF{
@@ -241,4 +241,10 @@ footer p{
     font-family: "Roboto", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;      
+  }
+
+  .UB{
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }

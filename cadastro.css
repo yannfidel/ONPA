@@ -76,11 +76,11 @@ header{
 .BS{
     background-color: rgb(255, 255, 255);
     color: rgb(116, 116, 116);
-    padding: 20px 15px 5px 15px;
+    padding: 30px 15px 5px 15px;
     margin: 20px;
     width: 700px;
     height: 500;
-    padding-bottom: 20px;
+    padding-bottom: 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -230,7 +230,7 @@ footer p{
 
 .LC{
     position: absolute;
-    top: 32px;
+    top: 58px;
     right: 173px;
 }
 
@@ -252,3 +252,9 @@ footer p{
 
  
   
+
+  .UB{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
